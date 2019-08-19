@@ -18,7 +18,7 @@ var XaoXaoApps = Apps.extend({
             if (session.debug) {
                 qs.debug = session.debug;
             }
-            var u = $.param.querystring("https://apps.odoo.com/apps/modules/browse?author=Xao%20Xao%20Digital%20CO.,LTD", {});
+            var u = $.param.querystring("https://apps.odoo.com/apps/modules/browse?author=Xao%20Xao%20Digital%20CO.", {});
             var css = {width: '100%', height: '750px'};
             self.$ifr = $('<iframe>').attr('src', u);
 
