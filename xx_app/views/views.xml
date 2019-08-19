@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <!-- Apps modules -->
+        <record model="ir.actions.client" id="xaoxao_modules_act_cl">
+            <field name="name">Xao Xao Apps</field>
+            <field name="tag">apps.xaoxao</field>
+        </record>
+        <menuitem id="module_mi" parent="base.menu_management" sequence="5" action="xaoxao_modules_act_cl"/>
+</odoo>
