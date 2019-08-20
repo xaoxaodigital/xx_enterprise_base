@@ -8,17 +8,12 @@ var Apps = require('web.Apps');
 
 var XaoXaoApps = Apps.extend({
     remote_action_tag: 'loempia.embed.xaoxao',
+
     start: function() {
         var self = this;
         var def = $.Deferred();
-        self.get_client().then(function(client) {
-            self.client = client;
-
-            var qs = {db: client.dbname};
-            if (session.debug) {
-                qs.debug = session.debug;
-            }
-            var u = $.param.querystring("https://apps.odoo.com/apps/modules/browse?author=Xao%20Xao%20Digital%20CO.", {});
+        var u = $.param.querystring("https://apps.odoo.com/apps/modules/browse?author=Xao%20Xao%20Digital%20CO.", {});
+            var height = $('.o_main .o_content').height();
             var css = {width: '100%', height: '750px'};
             self.$ifr = $('<iframe>').attr('src', u);
 
@@ -31,8 +26,8 @@ var XaoXaoApps = Apps.extend({
                     type: 'ir.actions.client',
                     tag: this.remote_action_tag,
                     params: _.extend({}, this.params, {
-                        db: session.db,
-                        origin: session.origin,
+                        db: this.session.db,
+                        origin: this.session.origin,
                     })
                 };
                 w.postMessage({type:'action', action: act}, client.origin);
@@ -42,6 +37,8 @@ var XaoXaoApps = Apps.extend({
                 this.$ifr.height(m.height);
             });
 
+            self.on('message:update_count', self, self._on_update_count);
+
             self.on('message:blockUI', self, function() { framework.blockUI(); });
             self.on('message:unblockUI', self, function() { framework.unblockUI(); });
             self.on('message:warn', self, function(m) {self.do_warn(m.title, m.message, m.sticky); });
@@ -49,17 +46,6 @@ var XaoXaoApps = Apps.extend({
             self.$ifr.appendTo(self.$el).css(css).addClass('apps-client');
 
             def.resolve();
-        }, function() {
-            self.do_warn(_t('Odoo Apps will be available soon'), _t('Showing locally available modules'), true);
-            return self._rpc({
-                route: '/web/action/load',
-                params: {action_id: self.failback_action_id},
-            }).then(function(action) {
-                return self.do_action(action);
-            }).always(function () {
-                def.reject();
-            });
-        });
         return def;
     },
 });
