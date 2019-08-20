@@ -61,7 +61,7 @@ var XaoXaoApps = Apps.extend({
             });
         });
         return def;
-    },
+    }
 });
 
 core.action_registry.add("apps.xaoxao", XaoXaoApps);

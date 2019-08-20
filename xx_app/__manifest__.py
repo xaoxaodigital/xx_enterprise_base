@@ -2,8 +2,8 @@
 # Part of Xao Xao Digital CO.,LTD. See LICENSE file for full copyright and licensing details.
 
 {
-    'name': 'Xao Xao Apps',
-    'version': '12.0.0.1',
+    'name': 'Xao Xao Application Base',
+    'version': '11.0.0.1',
     'description': 'Xao Xao Application Base',
     'author': 'Xao Xao Digital CO.,LTD',
     'website': 'https://www.xaoxao.vn',
