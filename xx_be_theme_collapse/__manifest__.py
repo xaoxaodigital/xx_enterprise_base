@@ -9,10 +9,10 @@ The module which add new special button to collapse left sidebar
     """,
     'author': "Xao Xao Digital CO.,LTD",
     'website': "https://www.xaoxao.vn",
-    "category": "Themes/Backend",
+    "category": "Tools",
     'depends': [
         'web'
-        # 'backend_theme_v12'
+        'backend_theme_v12'
     ],
     'data': [
         # Security

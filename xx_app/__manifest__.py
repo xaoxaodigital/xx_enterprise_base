@@ -7,7 +7,7 @@
     'description': 'Xao Xao Application Base',
     'author': 'Xao Xao Digital CO.,LTD',
     'website': 'https://www.xaoxao.vn',
-    'category': 'Xao Xao',
+    'category': 'Tools',
     'depends': [
         'web',
     ],
