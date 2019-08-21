@@ -12,7 +12,7 @@ var XaoXaoApps = Apps.extend({
     start: function() {
         var self = this;
         var def = $.Deferred();
-        var u = $.param.querystring("https://apps.odoo.com/apps/modules/browse?author=Xao%20Xao%20Digital%20CO.", {});
+        var u = $.param.querystring("https://apps.odoo.com/apps/browse?repo_maintainer_id=208617", {});
             var height = $('.o_main .o_content').height();
             var css = {width: '100%', height: '750px'};
             self.$ifr = $('<iframe>').attr('src', u);
