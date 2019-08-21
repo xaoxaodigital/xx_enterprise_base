@@ -25,5 +25,6 @@ The module which add new special button to collapse left sidebar
     ],
     'images': [],
     'license': 'LGPL-3',
+    'installable': True,
     'application': True,
 }
