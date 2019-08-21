@@ -11,7 +11,7 @@ The module which add new special button to collapse left sidebar
     'website': "https://www.xaoxao.vn",
     "category": "Tools",
     'depends': [
-        'web'
+        'web',
         'backend_theme_v12'
     ],
     'data': [
