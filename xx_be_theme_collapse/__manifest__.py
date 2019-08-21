@@ -23,7 +23,7 @@ The module which add new special button to collapse left sidebar
         'views/templates.xml',
         # Menu
     ],
-    'images': [],
+    'images': ['static/description/banner.png'],
     'license': 'LGPL-3',
     'installable': True,
     'application': True,
