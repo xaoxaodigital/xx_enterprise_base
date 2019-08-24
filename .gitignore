@@ -31,6 +31,8 @@ setup/win32/static/postgresql*.exe
 
 # various virtualenv
 /bin/
+/bin_v11/
+/bin_v12/
 /build/
 /dist/
 /include/
@@ -39,3 +41,5 @@ setup/win32/static/postgresql*.exe
 /share/
 /src/
 /community_addons
+/community_addons_v11
+/community_addons_v12
