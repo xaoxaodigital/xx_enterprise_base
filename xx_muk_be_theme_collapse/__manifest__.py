@@ -8,7 +8,7 @@ The module which add new special button to collapse left sidebar
     """,
     'author': "Xao Xao Digital CO.,LTD",
     'website': "https://www.xaoxao.vn",
-    "category": "Tools",
+    "category": "Theme/Backend",
     'depends': ['muk_web_theme'],
     'data': [
         'views/assets.xml',
