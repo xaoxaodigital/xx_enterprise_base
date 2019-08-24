@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  Copyright 2019 Xao Xao Digital CO.,LTD.
+  See LICENSE file for full copyright and licensing details.
+-->
+
+<odoo>
+    <data>
+        <template id="assets_backend" name="Xao Xao Arithmetic Operations" inherit_id="web.assets_backend">
+            <xpath expr="//script[last()]" position="after">
+                <script type="text/javascript"
+                        src="/xx_field_arithmetic_operation/static/src/js/fields/basic_fields.js"></script>
+            </xpath>
+        </template>
+    </data>
+</odoo>
